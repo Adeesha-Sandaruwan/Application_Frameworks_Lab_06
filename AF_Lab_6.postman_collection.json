@@ -1,0 +1,149 @@
+{
+  "info": {
+    "_postman_id": "35232263-9a35-44f2-832d-a153c170221c",
+    "name": "AF_Lab_6",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48023158",
+    "_collection_link": "https://go.postman.co/collection/48023158-35232263-9a35-44f2-832d-a153c170221c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Creating a Post (POST)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"My First Express API\",\r\n    \"content\": \"Testing this backend is actually pretty fun.\",\r\n    \"author\": \"Your Name\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/posts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "posts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Read Posts(Get)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/posts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "posts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Log In",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"SuperCoder\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Test Image Uploads",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU3VwZXJDb2RlciIsImlhdCI6MTc3NDUzNTk2MH0.jrfAJlwGOjkx42Obn5JW4M6X-FXEcgY6mbrVqnEida8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "My Image Post",
+              "type": "text",
+              "uuid": "d00465ca-c889-41f6-995a-d3af3e314f38"
+            },
+            {
+              "key": "content",
+              "value": "Look at this picture",
+              "type": "text",
+              "uuid": "0d9ddc1c-1983-411f-99b0-7b26cb52e77d"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "uuid": "f46c21df-527c-48a2-b35a-04351a159268",
+              "src": "/D:/Downloads Official/testId-back.jpg"
+            },
+            {
+              "key": "",
+              "type": "text",
+              "uuid": "2da1cfb8-65d0-4f81-bfb2-1c3600c23c3e",
+              "value": "",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/posts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "posts"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
